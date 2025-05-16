@@ -23,7 +23,7 @@ function validateForm() {
     // Dummy check (you can remove this if not needed)
     if (username && password.length >= 6) {
         // Redirect to index.html
-        window.location.href = "index.html";
+        window.location.href = "home.html";
         return false; // Prevent actual form submission
     }
 
