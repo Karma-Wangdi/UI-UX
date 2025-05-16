@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/landing.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Landing Page</title>
+</head>
+<body>
+  <header class="header">
+    <div class="left-section">
+      <div class="logo">
+        <img src="/assets/logo.png" alt="Logo" />
+      </div>
+    </div>
+    <div class="right-section">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <span class="search-icon">&#128269;</span>
+      </div>
+      <nav class="nav">
+        <a href="login.html" class="btn">Login</a>
+        <a href="register.html" class="btn">Register</a>
+      </nav>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+      </svg>
+    </button>
+  </header>
+
+  <section class="hero">
+    <img src="/assets/main4.png" alt="Hero Image">
+    <h1>What are you waiting for?</h1>
+    <p>Click the buttton to get started.</p>
+    <a href="register.html">
+      <button class="cta-btn">Get Started</button>
+    </a>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h4>For a coding education website:</h4>
+      <p>Interactive Courses – Learn by doing with real-time coding challenges.</p>
+      <p>Progress Tracking – Monitor your growth and achievements.</p>
+      <p>Certifications – Earn certificates to boost your portfolio.</p>
+    </div>
+    <div class="feature">
+      <h4>For a web service or app:</h4>
+      <p>User-Friendly Dashboard – Manage everything from one clean interface.</p>
+      <p>Customizable Settings – Tailor the platform to fit your needs.</p>
+      <p>Secure & Reliable – Built with modern, secure technologies.</p>
+    </div>
+    <div class="feature">
+      <h4>For a portfolio site:</h4>
+      <p>Projects Showcase – View real work with real results.</p>
+      <p>Skills Overview – Explore the tech stack and competencies.</p>
+      <p>Testimonials – See what clients and colleagues say.</p>
+    </div>
+  </section>
+  
+
+  <section class="gallery">
+    <div class="thumbs">
+      <a href="https://www.codecademy.com/" target="_blank" class="thumb">
+        <img src="/assets/logo1.png" alt="Logo 1">
+      </a>
+      <a href="https://www.w3schools.com/" target="_blank" class="thumb">
+        <img src="/assets/logo2.png" alt="Logo 2">
+      </a>
+      <a href="https://learn2code.info/" target="_blank" class="thumb">
+        <img src="/assets/logo3.png" alt="Logo 3">
+      </a>
+      <a href="https://github.com/" target="_blank" class="thumb">
+        <img src="/assets/logo4.png" alt="Logo 4">
+      </a>
+      <a href="https://www.freecodecamp.org/" target="_blank" class="thumb">
+        <img src="/assets/logo5.png" alt="Logo 5">
+      </a>
+    </div>
+  </section>
+  
+
+  <section class="info">
+    <h2>More Information</h2>
+    <p>This section explains more about the service.</p>
+    <button class="btn-outline">Learn More</button>
+  </section>
+
+  <footer class="animated-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 <strong>CodeBloom</strong>. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+
+    window.onload = function() {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+</body>
+</html>

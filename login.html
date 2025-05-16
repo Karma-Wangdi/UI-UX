@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/login.css">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="main-body">
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <img src="/assets/logo.png" alt="Logo" class="logo" />
+            <span class="top-title">CodeBloom</span>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <!-- Left Side (Visual Box) -->
+            <div class="visual-box">
+                <img src="/assets/login.png" alt="">
+            </div>
+  
+            <!-- Right Side (Form Area) -->
+            <div class="form-wrapper">
+                <form class="login-form" onsubmit="return validateForm()">
+                    <div class="label" style="text-align: center; padding-bottom: 30px;">
+                        <h3>Welcome To CodeBloom</h3>
+                    </div>
+            
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <button type="button" class="tab active-tab">Login</button>
+                        <button type="button" class="tab" onclick="window.location.href='register.html'">Register</button>
+                    </div>
+
+                    <div class="label" style="padding-bottom: 30px;">
+                        <h3>Already Registered!!!!!</h3>
+                        <h4>Login And Start Coding</h4>
+                    </div>
+  
+                    <!-- Username -->
+                    <div>
+                        <label class="label">Username</label>
+                        <input type="text" name="username" required class="input" placeholder="Enter username" />
+                    </div>
+  
+                    <!-- Password -->
+                    <div>
+                        <label class="label">Password</label>
+                        <input type="password" name="password" required minlength="6" class="input" placeholder="Enter password" />
+                    </div>
+  
+                    <!-- Remember & Forgot -->
+                    <div class="options">
+                        <label class="checkbox-group">
+                            <input type="checkbox" />
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+  
+                    <!-- Login Button -->
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/login.js" defer></script>
+</body>
+</html>

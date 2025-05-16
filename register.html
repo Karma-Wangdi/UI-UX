@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Register Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="main-body">
+    <div class="container">
+        <div class="top-bar">
+            <img src="/assets/logo.png" alt="Logo" class="logo" />
+            <span class="top-title">CodeBloom</span>
+        </div>
+        <div class="content-wrapper">
+            <div class="visual-box">
+                <img src="/assets/register.png" alt="">
+            </div>
+
+            <div class="form-wrapper">
+                <form name="registerForm" class="login-form" onsubmit="return validateForm(event)">
+                    <div class="label" style="text-align: center; padding-bottom: 30px;">
+                        <h3>Welcome To CodeBloom</h3>
+                    </div>
+            
+                    <div class="tabs">
+                        <button type="button" class="tab" onclick="window.location.href='login.html'">Login</button>
+                        <button type="button" class="tab active-tab">Register</button>
+                    </div>
+
+                    <div class="label" style="padding-bottom: 30px;">
+                        <h3>Are You New Here?</h3>
+                        <h4>What Are You Waiting For Register To Start Your Journey!</h4>
+                    </div>
+
+                    <div>
+                        <label class="label">Email</label>
+                        <input type="text" name="email" required class="input" placeholder="Enter email" />
+                    </div>
+
+                    <div>
+                        <label class="label">Username</label>
+                        <input type="text" name="username" required class="input" placeholder="Enter username" />
+                    </div>
+
+                    <div>
+                        <label class="label">Password</label>
+                        <input type="password" name="password" required minlength="6" class="input" placeholder="Enter password" />
+                    </div>
+
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const email = document.forms["registerForm"]["email"].value;
+            const username = document.forms["registerForm"]["username"].value;
+            const password = document.forms["registerForm"]["password"].value;
+
+            if (email.trim() === "") {
+                alert("Please enter an email.");
+                return false;
+            }
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (username.trim() === "") {
+                alert("Please enter a username.");
+                return false;
+            }
+            if (username.length < 3) {
+                alert("Username must be at least 3 characters long.");
+                return false;
+            }
+
+            if (password.trim() === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            alert("Registration successful!");
+            window.location.href = "membership.html";
+            return true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.login-form');
+            form.addEventListener('submit', validateForm);
+        });
+    </script>
+</body>
+</html>

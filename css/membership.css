@@ -1,0 +1,270 @@
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  color: var(--secondary-color);
+}
+
+
+.pricing-section {
+  background: url('/assets/back.jpeg') no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensures equal height */
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: rgb(12, 88, 25);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  background-color: rgba(37, 133, 56, 0.9); /* Slight transparency for contrast */
+}
+
+.plan-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.feature-list {
+  text-align: left;
+  color: var(--secondary-color);
+  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+.plan-button {
+  display: block;
+  background-color: rgb(112, 209, 112);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.plan-button:hover {
+  background-color: #059669;
+}
+
+.why-us-section {
+  background-color: var(--light-gray);
+}
+
+.learn-more-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+  background-color: #059669;
+}
+
+.features-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .features-container {
+    max-width: 600px;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .features-title {
+    font-size: 2rem;
+    color: #002F6C;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+
+  .feature-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-bullets li {
+    font-size: 1.1rem;
+    margin: 15px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .feature-bullets li span {
+    font-size: 1.4rem;
+  }
+
+.tools-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.tools-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tools-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tool-box {
+  background-color: #2f3640;
+  color: white;
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.tool-box:hover {
+  transform: scale(1.05);
+  background-color: #353b48;
+}
+
+.tool-box i {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #00a8ff;
+}
+
+.tool-box span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* DARK MODE STYLING */
+body.dark-mode {
+  background-color: #000; /* True dark background */
+  color: #fff; /* Light text for contrast */
+}
+
+body.dark-mode .site-header {
+  background-color: #121212; /* Darker header */
+}
+
+body.dark-mode .pricing-section,
+body.dark-mode .why-us-section,
+body.dark-mode .features-section,
+body.dark-mode .tools-section {
+  background-color: #046013;
+}
+
+body.dark-mode .pricing-card,
+body.dark-mode .tool-box,
+body.dark-mode .features-container {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+body.dark-mode .plan-button,
+body.dark-mode .learn-more-button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .plan-button:hover,
+body.dark-mode .learn-more-button:hover {
+  background-color: #444;
+}
+/* === BASE BUTTON & NAV STYLES (LIGHT MODE) === */
+.theme-toggle,
+.plan-button,
+.learn-more-button,
+.site-header {
+  background-color: #28a745; /* Green */
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.plan-button:hover,
+.learn-more-button:hover,
+.theme-toggle:hover {
+  background-color: #218838; /* Slightly darker green on hover */
+  color: #fff;
+}
+
+/* === DARK MODE OVERRIDES === */
+body.dark-mode .site-header,
+body.dark-mode .theme-toggle,
+body.dark-mode .plan-button,
+body.dark-mode .learn-more-button {
+  background-color: #145a32; /* Dark green */
+  color: #fff;
+}
+
+/* === Hover effects in dark mode === */
+body.dark-mode .plan-button:hover,
+body.dark-mode .learn-more-button:hover,
+body.dark-mode .theme-toggle:hover {
+  background-color: #1e7e34; /* Brighter green for hover in dark mode */
+  color: #fff;
+}

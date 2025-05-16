@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script href="npm i bootstrap-icons"></script>
+  <title>About Us</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">
+                <a href="index.html">
+                  <img src="/assets/logo.png" alt="Logo" class="logo" />
+                </a>
+              </div>
+        </div>
+        <div class="right-section">
+          <nav class="nav">
+            <div class="hamburger" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div><ul class="nav-links" id="navLinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="search-icon">
+              <i class="bi bi-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+              </i>
+            </span>
+          </div>
+        </div>
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+            </svg>
+            <i class="bi bi-circle-half"></i>
+          </button>
+      </header>
+
+  <section class="hero">
+    <h1 style="color: black !important;">Welcome to <img src="/assets/logo.png" alt="" style="height: 120px;"></h1>
+    <p>Discover the power of modern web solutions that work for your business goals.</p>
+    <button class="cta-button">Get Started</button>
+  </section>
+
+  <section class="feature-box" style="width: 100%; height: 450px; overflow: hidden;">
+    <img src="/assets/about.png" alt="About Image" style="width: 100%; height: 425px; object-fit: fill;">
+  </section>
+  
+
+  <section class="promo-star">
+    ★ Limited Time Offer ★
+  </section>
+
+  <section class="highlight">
+    <video src="/assets/about.mp4" autoplay muted playsinline loop></video>
+    <div class="overlay-text">Code Your Future with Us</div>
+  </section>
+  
+
+  <section class="testimonial-section">
+    <h2 style="color: black !important;">What Our Users Say</h2>
+    <div class="team-container">
+      <div class="team-card">
+        <div class="card-content blue">
+          <h3>Community Support</h3>
+          <p>The site lacks an integrated discussion forum or mentor support, which could help learners troubleshoot issues and stay motivated.</p>
+          <h4>John Doe</h4>
+          <p class="role">Designer Leader</p>
+        </div>
+        <div class="avatar" style="padding-top: 30px;">
+          <img src="/assets/pfp1.avif" alt="John Doe" >
+        </div>
+      </div>
+    
+      <div class="team-card">
+        <div class="card-content green">
+          <h3>Practice Features</h3>
+          <p>Interactive coding exercises and quizzes help reinforce learning, but more hands-on projects would better simulate real-world application.</p>
+          <h4>Amanda Jacob</h4>
+          <p class="role">Art Director</p>
+        </div>
+        <div class="avatar" style="padding-top: 30px;">
+          <img src="/assets/pfp2.jpeg" alt="Amanda Jacob">
+        </div>
+      </div>
+    
+      <div class="team-card">
+        <div class="card-content orange">
+          <h3>User Interface</h3>
+          <p>The platform has a clean and responsive design that enhances user experience, though some navigation elements could be more prominent.</p>
+          <h4>Nathan Lee</h4>
+          <p class="role">SEO & Marketing</p>
+        </div>
+        <div class="avatar" style="padding-top: 30px;">
+          <img src="/assets/pfp3.png" alt="Nathan Lee">
+        </div>
+      </div>
+    
+      <div class="team-card">
+        <div class="card-content pink">
+          <h3>Content Quality</h3>
+          <p>The lessons are well-organized and cover key programming concepts clearly, making it easy for beginners to grasp new topics.</p>
+          <h4>Analog Sara</h4>
+          <p class="role">Web Development</p>
+        </div>
+        <div class="avatar" style="padding-top: 30px;">
+          <img src="/assets/pfp4.jpeg" alt="Analog Sara">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card-section">
+    <h2>Latest from Our Blog</h2>
+    <div class="card-container">
+      <div class="card"><img src="/assets/blog0.jpg" alt="" style="height: 200px;"></div>
+      <div class="card"><img src="/assets/blog1.jpeg" alt="" style="height: 200px;"></div>
+      <div class="card"><img src="/assets/blog2.jpeg" alt="" style="height: 200px;"></div>
+      <div class="card"><img src="/assets/blog3.jpeg" alt="" style="height: 200px;"></div>
+    </div>
+  </section>
+
+  <footer class="animated-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 <strong>CodeBloom</strong>. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+
+    function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+  const isDark = document.body.classList.contains("dark-mode");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+// Load saved theme on page load
+window.onload = function() {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+};
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Wireframe Home Page</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="left-section">
+            <div class="logo">
+                <a href="index.html">
+                  <img src="/assets/logo.png" alt="Logo" class="logo" />
+                </a>
+              </div>
+        </div>
+        <div class="right-section">
+          <nav class="nav">
+            <div class="hamburger" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <span class="search-icon">
+              <i class="bi bi-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+              </i>
+            </span>
+          </div>
+        </div>
+          <button class="theme-toggle" onclick="toggleTheme()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+            </svg>
+            <i class="bi bi-circle-half"></i>
+          </button>
+      </header>
+      <h3>Your Progress</h3>
+<div class="xp-bar">
+  <div class="xp-fill"></div>
+</div>
+
+  <section class="hero-section">
+    <h1>Welcome to Our Website</h1>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="/assets/main.png" alt="Slide 1">
+        <img src="/assets/main2.jpg" alt="Slide 2">
+        <img src="/assets/main3.png" alt="Slide 3">
+      </div>
+      <div class="carousel-controls">
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+    <h1>Services We Offer</h1>
+    <div class="services">
+      <div>
+        <img src="/assets/html.png" alt="" style="padding-top: 30px;">
+        <h1 style="padding-top: 30px;">HTML</h1>
+      </div>
+      <div>
+        <img src="/assets/js.png" alt="" style="height: 256px;">
+        <h1>JavaScript</h1>
+      </div>
+      <div>
+        <img src="/assets/css.png" alt="" style="height: 256px;">
+        <h1>CSS</h1>
+      </div>
+      <div>
+        <img src="/assets/go.png" alt="" style="height: 256px;">
+        <h1>GoLang</h1>
+      </div>
+      <div>
+        <img src="/assets/wordpress.png" alt="" style="height: 256px;">
+        <h1>WordPress</h1>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p>Informative content here.</p>
+    <br>
+    <p>
+      At <strong>CodeBloom</strong>, our mission is to empower learners of all backgrounds to master coding skills through accessible, high-quality, and interactive online education. We aim to bridge the digital skills gap by providing real-world projects, personalized learning paths, and a supportive community to help every learner succeed in the tech-driven world.
+    </p>
+  </section>
+
+  <div class="cta">Get Started</div>
+
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-members">
+      <div class="circle"><img src="/assets/member1.jpg" alt="" style="height: 100px; width: 90px; border-radius: 50%;"></div>
+      <div class="circle"><img src="/assets/member2.jpg" alt="" style="height: 100px; width: 90px; border-radius: 50%;"></div>
+      <div class="circle"><img src="/assets/member3.jpg" alt="" style="height: 100px; width: 90px; border-radius: 50%;"></div>
+    </div>
+  </section>
+
+  <footer class="animated-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 <strong>CodeBloom</strong>. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("active");
+    }
+
+    let currentIndex = 0;
+    const slides = document.querySelector('.carousel-images');
+    const totalSlides = slides.children.length;
+
+    function updateSlidePosition() {
+  slides.style.transform = `translateX(-${currentIndex * 100}vw)`;
+}
+
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    }
+
+    // Optional: Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+  }
+  
+  function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
+  
+  // Load saved theme on page load
+  window.onload = function() {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  };
+  
+  </script>
+</body>
+</html>
