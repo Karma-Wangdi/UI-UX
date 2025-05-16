@@ -1,4 +1,4 @@
-# CodeBLOOM
+# CodeBloom
 CodeBloom, a modern web development learning platform aimed at beginners and intermediate learners. These guidelines ensure visual and messaging consistency across digital platforms and marketing channels.
 
 **Mission:** To empower aspiring developers by providing intuitive, community-driven coding tutorials and tools.
@@ -11,4 +11,4 @@ CodeBloom, a modern web development learning platform aimed at beginners and int
 - Curiosity
 - Creativity
 
-  # Start Small, Code Big
+# Start Small, Code Big
